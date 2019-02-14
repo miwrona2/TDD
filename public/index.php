@@ -1,10 +1,14 @@
 <?php 
 
-require_once 'CruisingControlSystem.php';
-require_once 'ExampleClasses.php';
-require_once 'ExampleTests.php';
+require __DIR__.'/../vendor/autoload.php';
 
-echo 'index file';
+
+use App\Speed;
+use App\ConstantSpeedSensorStub;
+use App\RandomSpeedSensorFake;
+use App\SpeedMother;
+
+
 
 $speed = new Speed();
 $speed->value = 60;
@@ -16,3 +20,6 @@ $constantSpeedSensorStub = new ConstantSpeedSensorStub($speed);
 $fake = new RandomSpeedSensorFake();
 $current = $fake->current();
 print_r($current);
+
+$random = SpeedMother::random();
+var_dump($random);
