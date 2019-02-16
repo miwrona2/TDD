@@ -19,7 +19,7 @@ $constantSpeedSensorStub = new ConstantSpeedSensorStub($speed);
 
 $fake = new RandomSpeedSensorFake();
 $current = $fake->current();
-print_r($current);
+//print_r($current);
 
 $random = SpeedMother::random();
 var_dump($random);
