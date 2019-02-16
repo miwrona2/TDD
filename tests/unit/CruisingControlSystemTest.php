@@ -1,6 +1,10 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
+use App\CruisingControlSystem;
+use App\SpeedMother;
+use App\EngineSpeedSpy;
+use App\ConstantSpeedSensorStub;
 
 final class CruisingControlSystemTest extends TestCase
 {
@@ -16,7 +20,7 @@ final class CruisingControlSystemTest extends TestCase
             $engineSpy
         );
 
-        $this->assertTrue($engineSpy->speedIncreased);
+//        $this->assertTrue($engineSpy->speedIncreased);
         $this->assertFalse($engineSpy->speedDecreased);
     }
 }

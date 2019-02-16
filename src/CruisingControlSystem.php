@@ -1,5 +1,7 @@
 <?php
 
+namespace App;
+
 final class CruisingControlSystem
 {
     private $expectedSpeed;
