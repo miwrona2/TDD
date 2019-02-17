@@ -3,5 +3,5 @@
 namespace App;
 
 interface SpeedSensor {
-    public function current():Speed;
+    public function current(): Speed;
 }

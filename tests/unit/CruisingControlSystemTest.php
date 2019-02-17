@@ -16,11 +16,11 @@ final class CruisingControlSystemTest extends TestCase
         $engineSpy = new EngineSpeedSpy();
 
         $ccs->control(
-            new ConstantSpeedSensorStub($speed->decreaseByTimes(2)),
+            new ConstantSpeedSensorStub((clone $speed)->decreaseByTimes(2)),
             $engineSpy
         );
 
-//        $this->assertTrue($engineSpy->speedIncreased);
+        $this->assertTrue($engineSpy->speedIncreased);
         $this->assertFalse($engineSpy->speedDecreased);
     }
 }
