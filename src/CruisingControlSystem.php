@@ -14,7 +14,7 @@ final class CruisingControlSystem
     public function control(SpeedSensor $speedSensor, Engine $engine): void
     {
         if($speedSensor->current()->isZero()) {
-            throw new Exception('Car is stopped, can\'t set the speed');
+            throw new \RuntimeException('Car is stopped, can\'t set the speed');
         }
 
         if($speedSensor->current()->lowerThan($this->expectedSpeed)) {
